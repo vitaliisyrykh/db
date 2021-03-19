@@ -166,4 +166,33 @@ VALUES (1, 1, true),
   (2, 1, false),
   (3, 2, true);
 /*  */
+/* 
+CREATE TABLE "phones"(
+  "brand" varchar(60) NOT NULL,
+  "model" varchar(60) NOT NULL,
+  "cpu" varchar(100) NOT NULL,
+
+); */
+
+SELECT * FROM "users"
+WHERE  "is_male" = false;
+
+SELECT * FROM "users" 
+WHERE "is_male" = true;
+
+ SELECT * FROM "users" 
+ WHERE "is_male" = true AND age("birthday") > make_interval(18);
+
+ SELECT * FROM "users" 
+ WHERE "is_male" =false AND age("birthday") > make_interval(18);
+
+ SELECT * FROM "users"
+ WHERE age("birthday") BETWEEN make_interval(20) AND make_interval(40);
+
+ SELECT  *
+ 
+ FROM "users"
+ WHERE char_length(concat("first_name", ' ', "last_name")) >15;
+
+
 
